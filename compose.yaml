@@ -1,0 +1,9 @@
+services:
+  app:
+    image: gcr.io/distroless/python3-debian12
+    volumes:
+      - .:/app
+    env_file:
+      - .env
+    working_dir: /app
+    command: ["./main.py"]
